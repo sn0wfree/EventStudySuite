@@ -31,11 +31,11 @@ setup(
     long_description_content_type="text/markdown",  # 新参数
     license="MIT Licence",
 
-    url="http://www.github.com/sn0wfree/ClickSQL",
+    url="http://www.github.com/sn0wfree/EventStudySuite",
     author=__author__,
     author_email="snowfreedom0815@gmail.com",
 
-    packages=find_packages(exclude=['dist', 'docs','EventStudySuite.egg-info' ]),
+    packages=find_packages(exclude=['dist', 'docs', 'EventStudySuite.egg-info']),
     include_package_data=True,
     setup_requires=read_requirements('requirements.txt'),  # 指定需要安装的依赖,
 
