@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 import statsmodels.api as sm
 
-from EventStudySuite.model import DefaultModel
+from EventStudySuite.model.DefaultModel import DefaultModel
 
 
 class MarketModelFast(DefaultModel):
@@ -12,7 +12,8 @@ class MarketModelFast(DefaultModel):
     def cal_ar(estimation_df, event_df, stock: str, formula: str = "{stock} ~ 1 + {factors}", factors=['Mkt_RF'],
                raise_error=False):
         """
-
+市场模型（Market Model，简写 MM）是一个线性模型，通过个股收益率对某个宽基指数收益
+率的回归来确定个股的预期收益，
         :param raise_error:
         :param estimation_df:  pd.DataFrame
         :param event_df:  pd.DataFrame
@@ -50,7 +51,8 @@ class MarketModel(DefaultModel):
     def cal_ar(estimation_df, event_df, stock: str, formula: str = "{stock} ~ 1 + {factors}", factors=['Mkt_RF'],
                raise_error=False):
         """
-
+市场模型（Market Model，简写 MM）是一个线性模型，通过个股收益率对某个宽基指数收益
+率的回归来确定个股的预期收益，
         :param raise_error:
         :param estimation_df:  pd.DataFrame
         :param event_df:  pd.DataFrame
