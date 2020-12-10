@@ -4,7 +4,7 @@ import unittest
 import pandas as pd
 
 from EventStudySuite.core.es_base import EventStudy
-from EventStudySuite.core.es_model import MarketModel
+from EventStudySuite.model import MarketModel
 
 
 class MyTestCase(unittest.TestCase):
@@ -18,7 +18,7 @@ class MyTestCase(unittest.TestCase):
         # date_df = pd.DataFrame(date, index=firm_list, columns=['Date'])
         # date_df.index.name = 'CompanyName'
         #
-        return_df = pd.read_csv('data.csv')
+        return_df = pd.read_pickle('C:\Users\ll\PycharmProjects\EventStudySuite\test\data.pkl')
         # event_dict = date_df.to_dict()['Date']
         event_dict = {'AMZN': ['2020-03-13', '2020-01-23'], 'AAPL': '2020-03-13', 'TSLA': '2020-03-13',
                       'GE': '2020-03-13',
