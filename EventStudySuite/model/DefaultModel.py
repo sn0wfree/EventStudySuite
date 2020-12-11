@@ -1,9 +1,10 @@
 # coding=utf-8
 import pandas as pd
 from EventStudySuite.utils import LazyInit
+from abc import abstractmethod, ABCMeta
 
 
-class DefaultModel(LazyInit):
+class DefaultModel(metaclass=ABCMeta):
     @staticmethod
     def check_type(name: str, data: object, data_type: object):
         if isinstance(data, data_type):
@@ -22,6 +23,6 @@ class DefaultModel(LazyInit):
         cls.check_type('factors', kwargs['factors'], list)
         return cls.cal_ar(*args, **kwargs)
 
-    @staticmethod
+    @abstractmethod
     def cal_ar(*args, **kwargs):
         raise ValueError('cal_ar have not been defined!')
