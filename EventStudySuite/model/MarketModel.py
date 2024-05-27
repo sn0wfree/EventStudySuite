@@ -31,7 +31,7 @@ class MarketModelFast(DefaultModel):
             x_array = estimation_df[factors[0]].values.ravel()
             sum_y = np.sum(y_array)
             sum_x = np.sum(x_array)
-            sum_xy = np.do(x_array, y_array.T)
+            sum_xy = np.dot(x_array, y_array.T)
             sum_x2 = np.dot(x_array, x_array)
             beta_Mkt = ((sum_x * sum_y) / length - sum_xy) / ((sum_x * sum_x) / length - sum_x2)
             alpha = (sum_y - sum_x * beta_Mkt) / length
